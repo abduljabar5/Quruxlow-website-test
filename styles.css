@@ -167,6 +167,7 @@ h2 {
 .nav-toggle {
     display: none; flex-direction: column; gap: 6px;
     background: none; border: none; cursor: pointer; padding: 4px;
+    position: relative; z-index: 10;
 }
 .nav-toggle span {
     width: 22px; height: 1.5px; background: var(--brown-deep);

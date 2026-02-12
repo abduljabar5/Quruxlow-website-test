@@ -658,6 +658,12 @@ h2 {
         box-shadow: -10px 0 40px rgba(44, 24, 16, 0.1);
     }
     .nav-links.open { right: 0; }
+    .nav-close {
+        position: absolute; top: 1.2rem; right: 1.2rem;
+        background: none; border: none; cursor: pointer;
+        font-size: 2rem; line-height: 1; color: var(--brown-deep);
+        padding: 0.25rem 0.5rem;
+    }
     .nav-links a { font-size: 1.05rem; color: var(--brown-deep); }
     .nav-links a::after { display: none; }
     .hero-title { font-size: clamp(2.8rem, 10vw, 4.5rem); }

@@ -17,11 +17,21 @@
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 
+    const navClose = document.getElementById('navClose');
+
+    function closeMenu() {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
     navToggle.addEventListener('click', function () {
         navToggle.classList.toggle('active');
         navLinks.classList.toggle('open');
         document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     });
+
+    navClose.addEventListener('click', closeMenu);
 
     navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {

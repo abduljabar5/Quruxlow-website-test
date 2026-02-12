@@ -173,8 +173,8 @@ h2 {
     width: 22px; height: 1.5px; background: var(--brown-deep);
     transition: all 0.3s ease; border-radius: 1px;
 }
-.nav-toggle.active span:first-child { transform: rotate(45deg) translate(4px, 4px); }
-.nav-toggle.active span:last-child { transform: rotate(-45deg) translate(4px, -4px); }
+.nav-toggle.active span:first-child { transform: translateY(3.75px) rotate(45deg); }
+.nav-toggle.active span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
 
 /* ===========================
    Hero — Split Layout

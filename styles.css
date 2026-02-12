@@ -173,7 +173,8 @@ h2 {
     width: 22px; height: 1.5px; background: var(--brown-deep);
     transition: all 0.3s ease; border-radius: 1px;
 }
-.nav-toggle.active { opacity: 0; pointer-events: none; }
+.nav-toggle.active span:first-child { transform: rotate(45deg) translate(4px, 4px); }
+.nav-toggle.active span:last-child { transform: rotate(-45deg) translate(4px, -4px); }
 
 /* ===========================
    Hero — Split Layout
@@ -646,6 +647,7 @@ h2 {
 @media (max-width: 768px) {
     :root { --gap: 3.5rem; --pad: 1.25rem; }
     .nav-toggle { display: flex; }
+    .nav-toggle { z-index: 100; }
     .nav-links {
         position: fixed; top: 0; right: -100%;
         width: 280px; height: 100vh;
@@ -655,14 +657,9 @@ h2 {
         gap: 1.5rem; padding: 2rem;
         transition: right 0.4s ease;
         box-shadow: -10px 0 40px rgba(44, 24, 16, 0.1);
+        z-index: 50;
     }
     .nav-links.open { right: 0; }
-    .nav-close {
-        position: absolute; top: 1.2rem; right: 1.2rem;
-        background: none; border: none; cursor: pointer;
-        font-size: 2rem; line-height: 1; color: var(--brown-deep);
-        padding: 0.25rem 0.5rem;
-    }
     .nav-links a { font-size: 1.05rem; color: var(--brown-deep); }
     .nav-links a::after { display: none; }
     .hero-title { font-size: clamp(2.8rem, 10vw, 4.5rem); }
